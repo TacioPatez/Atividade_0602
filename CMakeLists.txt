@@ -55,8 +55,10 @@ target_include_directories(Atividade_0602 PRIVATE
 
 # Add any user requested libraries
 target_link_libraries(Atividade_0602 
-        
-        )
+            pico_stdlib
+            pico_time
+            hardware_irq
+            hardware_pwm)
 
 pico_add_extra_outputs(Atividade_0602)
 

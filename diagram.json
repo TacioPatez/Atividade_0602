@@ -10,14 +10,32 @@
         "left": -69.11,
         "attrs": { "cyw43": "1", "builder": "pico-sdk" }
       },
-      { "type": "wokwi-servo", "id": "servo1", "top": 55.6, "left": 96, "attrs": {} }
+      { "type": "wokwi-servo", "id": "servo1", "top": 55.6, "left": 96, "attrs": {} },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 140,
+        "left": -165,
+        "rotate": 90,
+        "attrs": { "value": "1000" }
+      },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": 50,
+        "left": -150,
+        "attrs": { "color": "blue" }
+      }
     ],
     "connections": [
       [ "pico:GP0", "$serialMonitor:RX", "", [] ],
       [ "pico:GP1", "$serialMonitor:TX", "", [] ],
       [ "pico:GND.8", "servo1:GND", "black", [ "h0" ] ],
       [ "pico:3V3", "servo1:V+", "red", [ "h44.17", "v56.55" ] ],
-      [ "pico:GP22", "servo1:PWM", "blue", [ "h0" ] ]
+      [ "pico:GP22", "servo1:PWM", "blue", [ "h0" ] ],
+      [ "pico:GND.4", "r1:2", "black", [ "h0" ] ],
+      [ "pico:GP12", "led1:A", "green", [ "h0" ] ],
+      [ "led1:C", "r1:1", "green", [ "v0" ] ]
     ],
     "dependencies": {}
   }
