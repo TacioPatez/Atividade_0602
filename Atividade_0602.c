@@ -4,7 +4,7 @@
 #include "hardware/irq.h"
 #include "hardware/pwm.h"
 
-#define PWM_PIN 12 //LED PINO = 12
+#define PWM_PIN 22 //LED PINO = 12
 
 const uint16_t WRAP_PERIOD = 20000;
 const float PWM_DIVISER = 125.0; //divisor do clock para o PWM
